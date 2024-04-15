@@ -1,0 +1,24 @@
+# .github/workflows/github-actions-demo.yml
+
+name: GitHub Actions Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Print Hello World
+        run: echo "Hello World"
+
+      - name: Print Current Date
+        run: |
+          echo "Current Date:"
+          date
