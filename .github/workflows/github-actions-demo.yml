@@ -1,3 +1,5 @@
+# github-actions-demo.yml
+
 name: GitHub Actions Demo
 
 on:
@@ -19,7 +21,7 @@ jobs:
           python-version: '3.x'
 
       - name: Execute Python Script
-        run: python job.py
+        run: python /github/workspace/job.py
 
       - name: Install Dependencies and Run Tests
         run: |
