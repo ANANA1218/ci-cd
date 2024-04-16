@@ -18,5 +18,3 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Execute Python Script
-        run: python job.py
