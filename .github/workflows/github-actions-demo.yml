@@ -1,4 +1,4 @@
-# github-actions-demo.yml
+# .github/workflows/github-actions-demo.yml
 
 name: GitHub Actions Demo
 
@@ -13,17 +13,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+      - name: Print Hello World
+        run: echo "Hello World"
 
-      - name: Execute Python Script
-        run: python job.py
-
-      - name: Install Dependencies and Run Tests
+      - name: Print Current Date
         run: |
-          python -m pip install -r requirements.txt
-          pytest
+          echo "Current Date:"
+          date
