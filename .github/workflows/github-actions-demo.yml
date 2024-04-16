@@ -18,3 +18,11 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Execute Python Script
+        run: python job.py
+
+      - name: Install dependencies
+        run: pip install pytest
+
+      - name: Run tests
+        run: pytest
